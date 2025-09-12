@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DefaultLayout from './layouts/DefaultLayout.vue'
+</script>
 
 <template>
-  <button class="btn btn-primary">One</button>
+  <DefaultLayout />
 </template>
