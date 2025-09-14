@@ -2,9 +2,7 @@
 import { ref, watch, computed } from 'vue'
 import { IconSun, IconMoon } from '@tabler/icons-vue'
 
-const theme = ref<'light' | 'dark'>(
-  (localStorage.getItem('theme') as 'light' | 'dark') || 'light'
-)
+const theme = ref<'light' | 'dark'>((localStorage.getItem('theme') as 'light' | 'dark') || 'light')
 
 const applyTheme = () => {
   document.documentElement.setAttribute('data-theme', theme.value)
@@ -16,9 +14,7 @@ const switchTheme = () => {
 }
 
 const toggleTheme = () => {
-  document.startViewTransition
-    ? document.startViewTransition(() => switchTheme())
-    : switchTheme()
+  document.startViewTransition ? document.startViewTransition(() => switchTheme()) : switchTheme()
 }
 
 watch(theme, applyTheme, { immediate: true })
@@ -38,11 +34,7 @@ const isDark = computed(() => theme.value === 'dark')
         key="sun"
         class="h-6 w-6 text-yellow-500 transition-transform duration-300"
       />
-      <IconMoon
-        v-else
-        key="moon"
-        class="h-6 w-6 text-blue-500 transition-transform duration-300"
-      />
+      <IconMoon v-else key="moon" class="h-6 w-6 transition-transform duration-300" />
     </transition>
   </button>
 </template>

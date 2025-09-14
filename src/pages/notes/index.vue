@@ -8,8 +8,6 @@ import {
   IconLayoutGrid,
   IconSearch,
   IconPlus,
-  IconPencil,
-  IconTrash,
 } from '@tabler/icons-vue'
 import Sections from '../../components/shared/sections/Sections.vue'
 import NoteModal from '../../features/notes/components/NoteModal.vue'
