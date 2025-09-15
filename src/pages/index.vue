@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import HeroSection from '../features/home/HeroSection.vue'
-import FeaturesGrid from '../features/home/FeaturesGrid.vue'
-import CTASection from '../features/home/CTASection.vue'
+import { IconPlus } from '@tabler/icons-vue'
+import FeaturesGrid from '../features/home/components/FeaturesGrid.vue'
+import HeroSection from '../features/home/components/HeroSection.vue'
+import CTASection from '../features/home/components/CTASection.vue'
+import { buttonsHome } from '../features/home/data/home'
 </script>
 
 <template>
@@ -13,6 +15,10 @@ import CTASection from '../features/home/CTASection.vue'
     <FeaturesGrid />
 
     <!-- CTA Section -->
-    <CTASection />
+    <CTASection
+      title="¿Listo para organizar tus ideas?"
+      description="Empieza ahora mismo a crear tus notas y organiza tu vida fácilmente."
+      :buttons="buttonsHome"
+    />
   </div>
 </template>

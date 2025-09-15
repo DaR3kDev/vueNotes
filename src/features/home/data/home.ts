@@ -6,6 +6,7 @@ import {
   IconTag,
   IconZoomPan,
   IconBook,
+  IconPlus,
 } from '@tabler/icons-vue'
 
 export const features = [
@@ -56,4 +57,14 @@ export const stats = [
   { icon: IconSearch, color: 'text-green-600', label: 'Búsqueda rápida' },
   { icon: IconTag, color: 'text-purple-600', label: 'Etiquetas' },
   { icon: IconZoomPan, color: 'text-orange-600', label: 'Auto guardado' },
+]
+
+export const buttonsHome = [
+  {
+    label: 'Crear mi primera nota',
+    to: '/notes',
+    icon: IconPlus,
+    style:
+      'btn btn-white text-blue-600 gap-2 px-8 py-4 text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:ring-2 hover:ring-white/40',
+  },
 ]
