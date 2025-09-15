@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { IconPlus } from '@tabler/icons-vue'
 import FeaturesGrid from '../features/home/components/FeaturesGrid.vue'
 import HeroSection from '../features/home/components/HeroSection.vue'
 import CTASection from '../features/home/components/CTASection.vue'
