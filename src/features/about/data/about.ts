@@ -123,13 +123,13 @@ export const buttonsAbout = [
     to: '/notes',
     icon: IconPlus,
     style:
-      'btn btn-white text-blue-600 gap-2 px-8 py-4 text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:ring-2 hover:ring-white/40',
+      'btn btn-white flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full w-full sm:w-auto transition-transform duration-300 hover:scale-105 hover:ring-2 hover:ring-white/40',
   },
   {
     label: 'Volver al inicio',
     to: '/',
     icon: IconNotebook,
     style:
-      'btn btn-outline text-white border-white/40 gap-2 px-8 py-4 text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:bg-white/10',
+      'btn btn-outline text-white border-white/40 flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full w-full sm:w-auto transition-transform duration-300 hover:scale-105 hover:bg-white/10',
   },
 ]

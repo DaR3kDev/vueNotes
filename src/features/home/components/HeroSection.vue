@@ -6,11 +6,13 @@ import Sections from '../../../components/shared/sections/Sections.vue'
 </script>
 
 <template>
-  <Sections class="container mx-auto max-w-6xl px-6 py-20 text-center relative overflow-hidden">
-    <div class="mb-8 relative z-10">
+  <Sections
+    class="container mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-20 text-center relative overflow-hidden"
+  >
+    <div class="relative z-10">
       <!-- Título -->
       <h1
-        class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-base-content text-balance transition-colors duration-500"
+        class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-base-content text-balance transition-colors duration-500"
       >
         Organiza tus ideas con
         <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -20,26 +22,26 @@ import Sections from '../../../components/shared/sections/Sections.vue'
 
       <!-- Descripción -->
       <p
-        class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed text-base-content/70 transition-colors duration-500"
+        class="text-base sm:text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-base-content/70 transition-colors duration-500"
       >
         La forma más simple y elegante de capturar, organizar y encontrar tus notas. Todo en un
         lugar, siempre disponible.
       </p>
 
       <!-- CTA Botones -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 sm:mb-20">
         <RouterLink to="/notes">
           <button
             aria-label="Comenzar ahora"
-            class="btn btn-primary gap-2 px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+            class="btn btn-primary gap-2 px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
           >
             <IconPlus class="w-5 h-5" /> Comenzar ahora
           </button>
         </RouterLink>
-        <RouterLink to="/acerca-de">
+        <RouterLink to="/about">
           <button
             aria-label="Saber más"
-            class="btn btn-outline gap-2 px-8 py-4 text-lg font-semibold rounded-full transition-transform duration-300 hover:scale-105"
+            class="btn btn-outline gap-2 px-8 py-4 text-base sm:text-lg font-semibold rounded-full transition-transform duration-300 hover:scale-105"
           >
             Saber más <IconArrowRight class="w-5 h-5" />
           </button>
@@ -47,7 +49,9 @@ import Sections from '../../../components/shared/sections/Sections.vue'
       </div>
 
       <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto text-center">
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-3xl mx-auto text-center"
+      >
         <div
           v-for="(stat, i) in stats"
           :key="i"
@@ -60,7 +64,7 @@ import Sections from '../../../components/shared/sections/Sections.vue'
             :class="stat.color"
             aria-hidden="true"
           />
-          <div class="text-sm font-medium text-base-content/70">
+          <div class="text-sm sm:text-base font-medium text-base-content/70">
             {{ stat.label }}
           </div>
         </div>
@@ -69,10 +73,10 @@ import Sections from '../../../components/shared/sections/Sections.vue'
   </Sections>
   <!-- Fondos decorativos -->
   <div
-    class="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+    class="absolute top-0 left-0 w-60 sm:w-72 h-60 sm:h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
   ></div>
   <div
-    class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
+    class="absolute bottom-0 right-0 w-72 sm:w-80 h-72 sm:h-80 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
   ></div>
 </template>
 

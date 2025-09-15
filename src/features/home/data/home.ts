@@ -61,10 +61,10 @@ export const stats = [
 
 export const buttonsHome = [
   {
-    label: 'Crear mi primera nota',
+    label: 'Comenzar ahora',
     to: '/notes',
     icon: IconPlus,
     style:
-      'btn btn-white text-blue-600 gap-2 px-8 py-4 text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:ring-2 hover:ring-white/40',
+      'btn btn-primary flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full shadow-lg w-full sm:w-auto transition-transform duration-300 hover:scale-105',
   },
 ]
