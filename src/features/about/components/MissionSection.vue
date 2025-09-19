@@ -2,6 +2,7 @@
 import Card from '../../../components/shared/cards/Card.vue'
 import Sections from '../../../components/shared/sections/Sections.vue'
 import { miniFeatures } from '../data/about'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -35,11 +36,13 @@ import { miniFeatures } from '../data/about'
         </p>
 
         <!-- CTA -->
-        <button
-          class="btn btn-primary w-full sm:w-auto py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg font-semibold shadow-md transition-transform duration-300 hover:scale-105 mt-4"
-        >
-          Empieza a tomar notas
-        </button>
+        <RouterLink to="/notes">
+          <button
+            class="btn btn-primary w-full sm:w-auto py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg font-semibold shadow-md transition-transform duration-300 hover:scale-105 mt-4"
+          >
+            Empieza a tomar notas
+          </button>
+        </RouterLink>
       </div>
 
       <!-- Mini features -->
@@ -67,12 +70,12 @@ import { miniFeatures } from '../data/about'
       </div>
     </div>
 
-    <!-- Fondos decorativos sutiles -->
+    <!-- Fondos decorativos adaptativos -->
     <div
-      class="absolute -z-10 top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl"
+      class="absolute -z-10 top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl"
     ></div>
     <div
-      class="absolute -z-10 bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
+      class="absolute -z-10 bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-tr from-accent/20 to-secondary/20 rounded-full blur-3xl"
     ></div>
   </Sections>
 </template>

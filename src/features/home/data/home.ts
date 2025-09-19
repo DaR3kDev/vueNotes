@@ -9,6 +9,13 @@ import {
   IconPlus,
 } from '@tabler/icons-vue'
 
+export const baseBtn = `
+  btn flex items-center justify-center gap-2
+  px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold
+  rounded-full w-full sm:w-auto
+  transition-transform duration-300 hover:scale-105
+`
+
 export const features = [
   {
     title: 'Búsqueda inteligente',
@@ -64,7 +71,9 @@ export const buttonsHome = [
     label: 'Comenzar ahora',
     to: '/notes',
     icon: IconPlus,
-    style:
-      'btn btn-primary flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full shadow-lg w-full sm:w-auto transition-transform duration-300 hover:scale-105',
+    style: `
+      ${baseBtn}
+      btn-primary shadow-lg
+    `,
   },
 ]

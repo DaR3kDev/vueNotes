@@ -29,7 +29,7 @@ import { features } from '../data/home'
         :description="feature.description"
         :icon="feature.icon"
         :iconBg="feature.iconBg"
-        class="transition-transform duration-300 hover:scale-105 hover:shadow-xl animate-fadeIn bg-base-100 rounded-2xl border border-base-300"
+        class="transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl animate-fadeIn bg-base-100 rounded-2xl border border-base-300"
         :style="{ animationDelay: `${i * 150}ms` }"
       />
     </div>
@@ -38,6 +38,10 @@ import { features } from '../data/home'
 
 <style scoped>
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);

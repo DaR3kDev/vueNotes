@@ -13,6 +13,7 @@ import {
   IconTarget,
   IconUsers,
 } from '@tabler/icons-vue'
+import { baseBtn } from '../../home/data/home'
 
 export const miniFeatures = [
   {
@@ -122,14 +123,25 @@ export const buttonsAbout = [
     label: 'Crear mi primera nota',
     to: '/notes',
     icon: IconPlus,
-    style:
-      'btn btn-white flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full w-full sm:w-auto transition-transform duration-300 hover:scale-105 hover:ring-2 hover:ring-white/40',
+    style: `
+      ${baseBtn}
+      bg-white text-primary shadow-md
+      hover:ring-2 hover:ring-white/40
+      data-[theme=forest]:bg-green-200 
+      data-[theme=forest]:text-green-900
+      data-[theme=forest]:hover:ring-green-300
+    `,
   },
   {
     label: 'Volver al inicio',
     to: '/',
     icon: IconNotebook,
-    style:
-      'btn btn-outline text-white border-white/40 flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full w-full sm:w-auto transition-transform duration-300 hover:scale-105 hover:bg-white/10',
+    style: `
+      ${baseBtn}
+      btn-outline border-white/40 text-white hover:bg-white/10
+      data-[theme=forest]:border-green-300 
+      data-[theme=forest]:text-green-100
+      data-[theme=forest]:hover:bg-green-300/20
+    `,
   },
 ]

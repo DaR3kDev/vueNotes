@@ -15,7 +15,7 @@ import Sections from '../../../components/shared/sections/Sections.vue'
         class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-base-content text-balance transition-colors duration-500"
       >
         Organiza tus ideas con
-        <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           NotasApp
         </span>
       </h1>
@@ -60,28 +60,35 @@ import Sections from '../../../components/shared/sections/Sections.vue'
         >
           <component
             :is="stat.icon"
-            class="w-12 h-12 mb-3"
+            class="w-12 h-12 mb-3 transition-transform duration-300"
             :class="stat.color"
             aria-hidden="true"
           />
-          <div class="text-sm sm:text-base font-medium text-base-content/70">
+          <div
+            class="text-sm sm:text-base font-medium text-base-content/70 transition-colors duration-500"
+          >
             {{ stat.label }}
           </div>
         </div>
       </div>
     </div>
   </Sections>
+
   <!-- Fondos decorativos -->
   <div
-    class="absolute top-0 left-0 w-60 sm:w-72 h-60 sm:h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+    class="absolute top-0 left-0 w-60 sm:w-72 h-60 sm:h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"
   ></div>
   <div
-    class="absolute bottom-0 right-0 w-72 sm:w-80 h-72 sm:h-80 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
+    class="absolute bottom-0 right-0 w-72 sm:w-80 h-72 sm:h-80 bg-secondary/20 rounded-full blur-3xl animate-pulse"
   ></div>
 </template>
 
 <style scoped>
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);

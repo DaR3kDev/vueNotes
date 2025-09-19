@@ -21,7 +21,7 @@ defineProps<{
 <template>
   <Sections class="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 py-16 sm:py-20 relative">
     <Card
-      class="border-0 shadow-2xl overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl relative transition-all duration-500 hover:scale-[1.01]"
+      class="border-0 shadow-2xl overflow-hidden bg-gradient-to-r from-primary via-primary/80 to-secondary rounded-3xl relative transition-all duration-500 hover:scale-[1.01]"
     >
       <div class="p-6 sm:p-10 md:p-12 text-center space-y-6 sm:space-y-8 relative z-10">
         <!-- Título -->

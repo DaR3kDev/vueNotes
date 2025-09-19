@@ -24,37 +24,44 @@ const notes = ref<Note[]>([
     <div
       v-for="note in notes"
       :key="note.id"
-      class="card bg-base-100 shadow-md hover:shadow-xl transition-transform hover:-translate-y-1 rounded-xl border border-base-200"
+      class="card bg-base-100 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2 rounded-2xl border border-base-200 overflow-hidden"
     >
       <div class="card-body flex flex-col justify-between h-full">
         <!-- Título -->
-        <h2 class="card-title text-lg font-semibold text-primary truncate">
+        <h2 class="card-title text-lg font-bold truncate mb-2">
           {{ note.title }}
         </h2>
 
         <!-- Contenido -->
-        <p class="text-sm text-base-content/70 line-clamp-3 my-2">
+        <p class="text-sm text-base-content/70 line-clamp-3 mb-4">
           {{ note.content }}
         </p>
 
-        <!-- Etiquetas -->
-        <div class="flex flex-wrap gap-2 mb-2">
+        <!-- Etiquetas modernizadas -->
+        <div class="flex flex-wrap gap-2 mb-4">
           <span
             v-for="tag in note.tags"
             :key="tag"
-            class="badge badge-sm badge-outline text-xs text-base-content/70"
+            class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 transition-colors duration-200 cursor-default"
           >
             {{ tag }}
           </span>
         </div>
 
         <!-- Acciones -->
-        <div class="card-actions justify-end gap-2 mt-auto">
-          <button class="btn btn-sm btn-outline flex items-center gap-1">
+        <div class="card-actions justify-end gap-3 mt-auto">
+          <!-- Botón Editar -->
+          <button
+            class="flex items-center gap-2 px-4 py-2 text-sm font-semibold btn btn-outline btn-primary rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+          >
             <IconPencil class="w-4 h-4" />
             Editar
           </button>
-          <button class="btn btn-sm btn-error flex items-center gap-1">
+
+          <!-- Botón Borrar -->
+          <button
+            class="flex items-center gap-2 px-4 py-2 text-sm font-semibold btn btn-error rounded-full shadow-md hover:shadow-lg transition-all duration-200"
+          >
             <IconTrash class="w-4 h-4" />
             Borrar
           </button>

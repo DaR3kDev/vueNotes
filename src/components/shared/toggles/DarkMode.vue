@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
-import { IconSun, IconMoon } from '@tabler/icons-vue'
+import { IconSun, IconTrees } from '@tabler/icons-vue'
 
-const theme = ref<'light' | 'dark'>((localStorage.getItem('theme') as 'light' | 'dark') || 'light')
+const theme = ref<'light' | 'forest'>(
+  (localStorage.getItem('theme') as 'light' | 'forest') || 'light',
+)
 
 const applyTheme = () => {
   document.documentElement.setAttribute('data-theme', theme.value)
@@ -10,7 +12,7 @@ const applyTheme = () => {
 }
 
 const switchTheme = () => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  theme.value = theme.value === 'light' ? 'forest' : 'light'
 }
 
 const toggleTheme = () => {
@@ -19,22 +21,26 @@ const toggleTheme = () => {
 
 watch(theme, applyTheme, { immediate: true })
 
-const isDark = computed(() => theme.value === 'dark')
+const isForest = computed(() => theme.value === 'forest')
 </script>
 
 <template>
   <button
-    class="p-2 rounded-full hover:bg-base-200 dark:hover:bg-base-300 transition-colors duration-200"
+    class="p-2 rounded-full hover:bg-base-200 transition-colors duration-200"
     @click="toggleTheme"
     aria-label="Cambiar tema"
   >
     <transition name="fade-scale" mode="out-in">
       <IconSun
-        v-if="!isDark"
+        v-if="!isForest"
         key="sun"
         class="h-6 w-6 text-yellow-500 transition-transform duration-300"
       />
-      <IconMoon v-else key="moon" class="h-6 w-6 transition-transform duration-300" />
+      <IconTrees
+        v-else
+        key="forest"
+        class="h-6 w-6 text-green-600 transition-transform duration-300"
+      />
     </transition>
   </button>
 </template>

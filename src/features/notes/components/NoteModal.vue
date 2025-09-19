@@ -40,46 +40,47 @@ watch(
       <!-- Campo: Título -->
       <div class="form-control">
         <label class="label">
-          <span class="label-text font-semibold">Título</span>
+          <span class="label-text font-semibold text-base-content/80">Título</span>
         </label>
         <input
           v-model="title"
           type="text"
           placeholder="Ej: Reunión con cliente"
-          class="input input-bordered w-full focus:input-primary"
+          class="input input-bordered w-full rounded-xl shadow-sm focus:input-primary transition-all"
         />
       </div>
-
       <!-- Campo: Contenido -->
       <div class="form-control">
         <label class="label">
-          <span class="label-text font-semibold">Contenido</span>
+          <span class="label-text font-semibold text-base-content/80">Contenido</span>
         </label>
         <textarea
           v-model="content"
           placeholder="Escribe el contenido de la nota..."
-          class="textarea textarea-bordered w-full min-h-[140px] focus:textarea-primary"
+          class="textarea textarea-bordered w-full min-h-[140px] rounded-xl shadow-sm focus:textarea-primary transition-all resize-none"
         />
       </div>
 
       <!-- Campo: Etiquetas -->
       <div class="form-control">
         <label class="label">
-          <span class="label-text font-semibold">Etiquetas</span>
+          <span class="label-text font-semibold text-base-content/80">Etiquetas</span>
         </label>
         <input
           v-model="tags"
           type="text"
           placeholder="Ej: trabajo, urgente, cliente"
-          class="input input-bordered w-full focus:input-primary"
+          class="input input-bordered w-full rounded-xl shadow-sm focus:input-primary transition-all"
         />
-        <span class="text-xs text-gray-500 mt-1"> Separa las etiquetas con coma </span>
+        <span class="text-xs text-gray-500 mt-1">Separa las etiquetas con coma</span>
       </div>
 
       <!-- Acciones -->
-      <div class="modal-action flex justify-end gap-3">
-        <button class="btn btn-outline btn-sm" @click="close">Cancelar</button>
-        <button class="btn btn-primary btn-sm">
+      <div class="modal-action flex justify-end gap-3 mt-4">
+        <button class="btn btn-outline btn-sm rounded-full hover:shadow-md transition">
+          Cancelar
+        </button>
+        <button class="btn btn-primary btn-sm rounded-full hover:shadow-md transition">
           {{ props.note ? 'Actualizar' : 'Guardar' }}
         </button>
       </div>
